@@ -1,0 +1,191 @@
+# # # OMR Evaluation System Configuration
+
+# # # Image processing parameters
+# # image:
+# #   resize_width: 800
+# #   resize_height: 1200
+# #   gaussian_blur_kernel: 5
+# #   threshold_block_size: 11
+# #   threshold_c: 2
+# #   contour_area_threshold: 10000
+
+# # # Grid detection parameters
+# # grid:
+# #   rows: 100  # Total questions
+# #   cols: 4    # Options per question (A, B, C, D)
+# #   bubble_min_area: 30
+# #   bubble_max_area: 3000
+# #   bubble_aspect_ratio_tolerance: 0.5
+# #   grid_tolerance: 0.2
+
+# # # Scoring parameters
+# # scoring:
+# #   subjects:
+# #     - name: "Python"
+# #       start: 1
+# #       end: 20
+# #     - name: "EDA" 
+# #       start: 21
+# #       end: 40
+# #     - name: "SQL"
+# #       start: 41
+# #       end: 60
+# #     - name: "Power BI"
+# #       start: 61
+# #       end: 80
+# #     - name: "Statistics"
+# #       start: 81
+# #       end: 100
+  
+# #   marks_per_question: 1
+# #   negative_marking: false
+# #   multiple_answers_allowed: true
+
+# # # File paths
+# # paths:
+# #   data_folder: "data"
+# #   output_folder: "output"
+# #   logs_folder: "logs"
+# #   answer_keys: "data\\answer_keys.xlsx"
+
+# # # Quality thresholds
+# # quality:
+# #   min_confidence: 0.7
+# #   error_tolerance: 0.005  # 0.5% error tolerance
+# #   review_threshold: 0.8
+
+# # # Debug settings
+# # debug:
+# #   save_intermediate_images: true
+# #   show_processing_steps: false
+# #   log_level: "INFO"
+
+
+
+
+# # OMR Evaluation System Configuration
+
+# # Image processing parameters
+# image:
+#   resize_width: 1000  # Increased for better detection
+#   resize_height: 1400
+#   gaussian_blur_kernel: 3  # Reduced for sharper edges
+#   threshold_block_size: 15  # Increased for better adaptive thresholding
+#   threshold_c: 5
+#   contour_area_threshold: 8000  # Adjusted for sheet detection
+
+# # Grid detection parameters - More flexible
+# grid:
+#   rows: 100
+#   cols: 4
+#   bubble_min_area: 20  # Reduced minimum area
+#   bubble_max_area: 4000  # Increased maximum area
+#   bubble_aspect_ratio_tolerance: 0.8  # More tolerant
+#   grid_tolerance: 0.3  # Increased tolerance
+
+# # Scoring parameters
+# scoring:
+#   subjects:
+#     - name: "Python"
+#       start: 1
+#       end: 20
+#     - name: "EDA" 
+#       start: 21
+#       end: 40
+#     - name: "SQL"
+#       start: 41
+#       end: 60
+#     - name: "Power BI"
+#       start: 61
+#       end: 80
+#     - name: "Statistics"
+#       start: 81
+#       end: 100
+  
+#   marks_per_question: 1
+#   negative_marking: false
+#   multiple_answers_allowed: true
+
+# # File paths
+# paths:
+#   data_folder: "data"
+#   output_folder: "output"
+#   logs_folder: "logs"
+#   answer_keys: "data\\answer_keys.xlsx"
+
+# # Quality thresholds - More lenient
+# quality:
+#   min_confidence: 0.6  # Reduced minimum confidence
+#   error_tolerance: 0.01
+#   review_threshold: 0.7  # Reduced review threshold
+
+# # Debug settings
+# debug:
+#   save_intermediate_images: true
+#   show_processing_steps: false
+#   log_level: "DEBUG"  # More verbose logging
+
+
+
+
+# OMR Evaluation System Configuration - ENHANCED
+
+# Image processing parameters - Optimized for detection
+image:
+  resize_width: 1200    # Increased for better detail capture
+  resize_height: 1600
+  gaussian_blur_kernel: 3   # Minimal blur to preserve edges
+  threshold_block_size: 21  # Larger blocks for adaptive thresholding
+  threshold_c: 8           # Adjusted for better contrast
+  contour_area_threshold: 6000  # Lowered for smaller sheets
+
+# Enhanced Grid detection parameters
+grid:
+  rows: 100
+  cols: 4
+  bubble_min_area: 15     # Lowered for smaller bubbles
+  bubble_max_area: 5000   # Increased for larger bubbles
+  bubble_aspect_ratio_tolerance: 1.0  # Very tolerant
+  grid_tolerance: 0.4     # More flexible
+
+# Scoring parameters
+scoring:
+  subjects:
+    - name: "Python"
+      start: 1
+      end: 20
+    - name: "EDA" 
+      start: 21
+      end: 40
+    - name: "SQL"
+      start: 41
+      end: 60
+    - name: "Power BI"
+      start: 61
+      end: 80
+    - name: "Statistics"
+      start: 81
+      end: 100
+  
+  marks_per_question: 1
+  negative_marking: false
+  multiple_answers_allowed: true
+
+# File paths
+paths:
+  data_folder: "data"
+  output_folder: "output"
+  logs_folder: "logs"
+  answer_keys: "data\\answer_keys.xlsx"
+
+# Enhanced Quality thresholds
+quality:
+  min_confidence: 0.5      # Lowered for more detections
+  error_tolerance: 0.02    # More tolerant
+  review_threshold: 0.6    # Lower review threshold
+
+# Enhanced Debug settings
+debug:
+  save_intermediate_images: true
+  show_processing_steps: true
+  log_level: "INFO"        # Balanced logging
